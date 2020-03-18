@@ -1,11 +1,11 @@
 package roman
 
+import "strings"
+
 func Ator(arabic int) string {
-	if arabic == 1 {
-		return "I"
+	res := strings.Builder{}
+	for i := 0; i < arabic; i++ {
+		res.WriteString("I")
 	}
-	if arabic == 2 {
-		return "II"
-	}
-	return "III"
+	return res.String()
 }
