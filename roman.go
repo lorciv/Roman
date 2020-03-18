@@ -2,12 +2,12 @@ package roman
 
 import "strings"
 
-type Symbol struct {
+type symbol struct {
 	symbol string
 	value  int
 }
 
-var symbols = []Symbol{
+var symbols = []symbol{
 	{"M", 1000},
 	{"CM", 900},
 	{"D", 500},
