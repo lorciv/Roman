@@ -2,12 +2,12 @@ package roman
 
 import "strings"
 
-type Numeral struct {
+type Symbol struct {
 	symbol string
 	value  int
 }
 
-var symbols = []Numeral{
+var symbols = []Symbol{
 	{"M", 1000},
 	{"CM", 900},
 	{"D", 500},
@@ -23,6 +23,7 @@ var symbols = []Numeral{
 	{"I", 1},
 }
 
+// Ator converts Arabic numerals to Roman numerals.
 func Ator(arabic int) string {
 	res := strings.Builder{}
 	for _, sym := range symbols {
@@ -32,4 +33,16 @@ func Ator(arabic int) string {
 		}
 	}
 	return res.String()
+}
+
+// Rtoa converts Roman numerals to Arabic numerals.
+func Rtoa(roman string) int {
+	res := 0
+	for _, sym := range symbols {
+		for strings.HasPrefix(roman, sym.symbol) {
+			res += sym.value
+			roman = roman[len(sym.symbol):]
+		}
+	}
+	return res
 }
