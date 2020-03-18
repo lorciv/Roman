@@ -12,6 +12,7 @@ func TestRomanNumerals(t *testing.T) {
 	}{
 		{1, "I"},
 		{2, "II"},
+		{3, "III"},
 	}
 	for _, test := range tests {
 		descr := fmt.Sprintf("convert %d to %s", test.arabic, test.roman)
