@@ -1,5 +1,8 @@
 package roman
 
 func Ator(arabic int) string {
-	return "I"
+	if arabic == 1 {
+		return "I"
+	}
+	return "II"
 }
