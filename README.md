@@ -2,14 +2,14 @@
 
 Roman is a Go library for converting numbers to and from the Roman numeral system.
 
-Roman offer two package-level functions. Function `Ator` converts Arabic numerals to Roman numerals.
+Roman offers two package-level functions. Function `Itor` converts integers to Roman numerals.
 
 ```go
-func Ator(arabic int) string
+func Itor(arabic int) string
 ```
 
-Function `Rtoa` converts Roman numerals to Arabic numerals.
+Function `Rtoi` converts Roman numerals to integers.
 
 ```go
-func Rtoa(roman string) int
+func Rtoi(roman string) int
 ```

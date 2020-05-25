@@ -47,25 +47,25 @@ var tests = []struct {
 	{798, "DCCXCVIII"},
 }
 
-func TestArabicToRoman(t *testing.T) {
+func TestIntegerToRoman(t *testing.T) {
 	for _, test := range tests {
 		descr := fmt.Sprintf("convert %d to %s", test.arabic, test.roman)
 		t.Run(descr, func(t *testing.T) {
-			got := Ator(test.arabic)
+			got := Itor(test.arabic)
 			if got != test.roman {
-				t.Errorf("got %q, want %q", got, test.roman)
+				t.Errorf("Itor(%d) = %s, want %s", test.arabic, got, test.roman)
 			}
 		})
 	}
 }
 
-func TestRomanToArabic(t *testing.T) {
+func TestRomanToInteger(t *testing.T) {
 	for _, test := range tests {
 		descr := fmt.Sprintf("convert %s to %d", test.roman, test.arabic)
 		t.Run(descr, func(t *testing.T) {
-			got := Rtoa(test.roman)
+			got := Rtoi(test.roman)
 			if got != test.arabic {
-				t.Errorf("got %d, want %d", got, test.arabic)
+				t.Errorf("Rtoi(%s) = %d, want %d", test.roman, got, test.arabic)
 			}
 		})
 	}

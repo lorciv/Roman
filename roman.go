@@ -23,8 +23,8 @@ var symbols = []symbol{
 	{"I", 1},
 }
 
-// Ator converts Arabic numerals to Roman numerals.
-func Ator(arabic int) string {
+// Itor converts integers to Roman numerals.
+func Itor(arabic int) string {
 	res := strings.Builder{}
 	for _, sym := range symbols {
 		for arabic >= sym.value {
@@ -35,8 +35,8 @@ func Ator(arabic int) string {
 	return res.String()
 }
 
-// Rtoa converts Roman numerals to Arabic numerals.
-func Rtoa(roman string) int {
+// Rtoi converts Roman numerals to integers.
+func Rtoi(roman string) int {
 	res := 0
 	for _, sym := range symbols {
 		for strings.HasPrefix(roman, sym.symbol) {
