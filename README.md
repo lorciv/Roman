@@ -13,3 +13,5 @@ Function `Rtoi` converts Roman numerals to integers.
 ```go
 func Rtoi(roman string) int
 ```
+
+Copyright MCMXCIV-MMXXI - Lorenzo Civolani
